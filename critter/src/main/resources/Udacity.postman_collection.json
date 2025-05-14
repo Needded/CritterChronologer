@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "3da4eeec-6238-471f-ab55-ce0d742fa76e",
+		"name": "Udacity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Alex\",\n  \"phoneNumber\": \"1234567890\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/user/customer",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["user", "customer"]
+				}
+			}
+		},
+		{
+			"name": "Save Pet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"CAT\",\n  \"name\": \"Kilo\",\n  \"birthDate\": \"2019-12-16T04:43:57.995Z\",\n  \"notes\": \"HI KILO\",\n  \"ownerId\": \"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/pet",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["pet"]
+				}
+			}
+		},
+		{
+			"name": "Save Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Hannah\",\n  \"skills\": [\"PETTING\", \"FEEDING\"]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/user/employee",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["user", "employee"]
+				}
+			}
+		},
+		{
+			"name": "Add Employee Schedule",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]"
+				},
+				"url": {
+					"raw": "http://localhost:8082/user/employee/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["user", "employee", "1"]
+				}
+			}
+		},
+		{
+			"name": "Check Availability",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/user/employee/availability",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["user", "employee", "availability"]
+				}
+			}
+		},
+		{
+			"name": "Create Schedule",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]"
+				},
+				"url": {
+					"raw": "http://localhost:8082/user/employee/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["user", "employee", "1"]
+				}
+			}
+		},
+		{
+			"name": "Find Schedule By Pet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/schedule/pet/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["schedule", "pet", "1"]
+				}
+			}
+		},
+		{
+			"name": "Find Schedule By Employee",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/schedule/employee/2",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["schedule", "employee", "2"]
+				}
+			}
+		},
+		{
+			"name": "Find Schedule By Owner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/schedule/customer/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["schedule", "customer", "1"]
+				}
+			}
+		},
+		{
+			"name": "Get All Customers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/user/customer",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["user", "customer"]
+				}
+			}
+		},
+		{
+			"name": "Get All Pets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/pet",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["pet"]
+				}
+			}
+		},
+		{
+			"name": "Get Pets By Owner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/pet/owner/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["pet", "owner", "1"]
+				}
+			}
+		},
+		{
+			"name": "Get Owner By Pet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/user/customer/pet/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["user", "customer", "pet", "1"]
+				}
+			}
+		}
+	]
+}
